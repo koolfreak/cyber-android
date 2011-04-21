@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When selected, use grey -->
+    <item android:drawable="@drawable/ic_tab_mortcalc"
+          android:state_selected="true">
+       <corners android:bottomLeftRadius="0dp"
+         android:bottomRightRadius="0dp" 
+         android:topLeftRadius="5dp"
+         android:topRightRadius="5dp" />   
+     </item>
+    <!-- When not selected, use white-->
+    <item android:drawable="@drawable/ic_tab_mortcalc_blu">
+    	<corners android:bottomLeftRadius="0dp"
+         android:bottomRightRadius="0dp" 
+         android:topLeftRadius="5dp"
+         android:topRightRadius="5dp" />
+    </item>
+</selector>
