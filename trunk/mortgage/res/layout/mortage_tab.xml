@@ -12,8 +12,7 @@
 	<TextView android:text="Rate:" android:layout_width="wrap_content"
 		android:layout_height="wrap_content" />
 	<EditText android:id="@+id/editRate" android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:singleLine="true"
-		android:inputType="textNoSuggestions" />
+		android:layout_height="wrap_content" android:inputType="textNoSuggestions" />
 
 	<TextView android:text="Years to Pay:" android:layout_width="wrap_content"
 		android:layout_height="wrap_content" />
