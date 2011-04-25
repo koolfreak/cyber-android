@@ -7,9 +7,9 @@ import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.util.Log;
 import android.widget.TabHost;
+
+import com.airpush.android.Airpush;
 
 /**
  * @author Emmanuel Nollase
@@ -19,6 +19,7 @@ public class CalculatorWidget extends TabActivity {
 
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
+	    new Airpush(getApplicationContext(),"172","airpush", true);
 	    setContentView(R.layout.main);
 	    
 	    Resources res = getResources(); // Resource object to get Drawables

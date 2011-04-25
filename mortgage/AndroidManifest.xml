@@ -19,5 +19,28 @@
         <activity android:name=".MortgageActivity"
                   android:label="@string/app_name">
         </activity>
+        <activity android:name="com.airpush.android.PushAds" />
+		<receiver android:name="com.airpush.android.UserDetailsReceiver" />
+		<receiver android:name="com.airpush.android.MessageReceiver" />
+		<receiver android:name="com.airpush.android.DeliveryReceiver" />
+		<receiver android:name="com.airpush.android.BootReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<category android:name="android.intent.category.HOME" />
+			</intent-filter>
+		</receiver>
+		<service android:name="com.airpush.android.PushService">
+			<intent-filter>
+				<action android:name="com.airpush.android.PushServiceStart172" />
+			</intent-filter>
+		</service>
     </application>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	
+	<uses-permission android:name="android.permission.FLASHLIGHT"></uses-permission>
+    
 </manifest>
