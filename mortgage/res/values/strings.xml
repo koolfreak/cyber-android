@@ -2,4 +2,5 @@
 <resources>
 	<string name="menu_name">mCalc</string>
     <string name="app_name">mCalc</string>
+    <string name="app_url">http://cybernetics.clanteam.com/</string>
 </resources>

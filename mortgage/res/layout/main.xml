@@ -20,9 +20,9 @@
             android:layout_height="fill_parent"
             android:padding="5dp"/>
             
-      <include layout="@layout/mortage_tab"
-        			android:id="@+id/mortgae_tab" />
-            
     </LinearLayout>
+    
+    <TextView android:text="@string/app_url" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="bottom" android:autoLink="web" />
     
 </TabHost>

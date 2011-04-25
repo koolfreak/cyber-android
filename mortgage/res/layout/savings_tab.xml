@@ -10,12 +10,12 @@
 		android:layout_width="wrap_content" android:layout_height="wrap_content" />
 	<EditText android:id="@+id/editTargetAmount" 
 		android:layout_width="250px" android:layout_height="wrap_content" 
-		android:inputType="number"/>
+		android:singleLine="true" android:inputType="number"/>
 
 	<TextView android:text="I've already saved:" android:id="@+id/textVSaved"
 		android:layout_width="wrap_content" android:layout_height="wrap_content" />
 	<EditText android:id="@+id/editSaved" android:layout_width="250px"
-		android:layout_height="wrap_content" android:inputType="number"/>
+		android:layout_height="wrap_content" android:singleLine="true" android:inputType="number"/>
 		
 	<TextView android:text="Interest rate expected:" android:id="@+id/textVRate"
 		android:layout_width="wrap_content" android:layout_height="wrap_content" />
@@ -25,7 +25,7 @@
 	<TextView android:text="Years to Save:" android:id="@+id/textVYS"
 		android:layout_width="wrap_content" android:layout_height="wrap_content" />
 	<EditText android:id="@+id/editYr2Save" android:layout_width="250px"
-		android:layout_height="wrap_content" android:inputType="number"/>
+		android:layout_height="wrap_content" android:singleLine="true" android:inputType="number"/>
 
 	<LinearLayout android:id="@+id/calcReset"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
