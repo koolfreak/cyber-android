@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< .mine
+	android:id="@android:id/tabhost" android:paddingTop="@dimen/tab_space_top"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	
+	<RelativeLayout android:id="@+id/tab_relative_layout"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		
+		<TabWidget android:id="@android:id/tabs"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"></TabWidget>
+		<FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:layout_below="@android:id/tabs"></FrameLayout>
+	</RelativeLayout>
+	
+	<TextView android:text="@string/app_url" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="bottom"
+		android:autoLink="web" />
+	
+	<com.mopub.mobileads.MoPubView
+		android:id="@+id/adview" android:layout_width="fill_parent"
+		android:layout_height="50dp" />
+		
+=======
     android:id="@android:id/tabhost"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -22,6 +45,7 @@
             
     </LinearLayout>
     
+>>>>>>> .r8
     <TextView android:text="@string/app_url" android:layout_width="wrap_content"
 		android:layout_height="wrap_content" android:layout_gravity="bottom" android:autoLink="web" />
     
