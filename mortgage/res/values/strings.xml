@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="menu_name">mCalc</string>
-    <string name="app_name">mCalc</string>
+	<string name="app_name">mCalc</string>
+	<string name="tab_1">Mortgage</string>
+	<string name="tab_2">Savings</string>
+	<string name="app_url">http://cybernetics.zxq.net</string>
     <string name="app_url">http://cybernetics.clanteam.com/</string>
 </resources>
