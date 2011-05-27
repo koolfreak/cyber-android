@@ -18,6 +18,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.mopub.mobileads.MoPubView;
 
 /**
  * @author Emmanuel Nollase
@@ -30,10 +33,15 @@ public class MortgageActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mortgage_tab);
+		
 		final AlertDialog.Builder adb = new AlertDialog.Builder(this);
 		final AlertDialog ad = adb.create();
 		ad.setCancelable(true);
 		ad.setCanceledOnTouchOutside(true);
+		
+		 MoPubView mpv = (MoPubView) findViewById(R.id.adview);
+		 mpv.setAdUnitId("agltb3B1Yi1pbmNyDQsSBFNpdGUYmNfrAQw");
+		 mpv.loadAd();
 		
 		final EditText principal = (EditText) findViewById(R.id.editPrincipal);
 		final EditText rate = (EditText) findViewById(R.id.editRate);
@@ -139,10 +147,19 @@ public class MortgageActivity extends Activity {
 	
 	 //---sends an SMS message to another device---
     private void sendSMS(String phoneNumber, String message)
-    {        
+    {  
+    	try {
         PendingIntent pi = PendingIntent.getActivity(this, 0,
             new Intent(this, MortgageActivity.class), 0);                
         SmsManager sms = SmsManager.getDefault();
-        sms.sendTextMessage(phoneNumber, null, message, pi, null);        
+        sms.sendTextMessage(phoneNumber, null, message, pi, null);
+        Toast.makeText(MortgageActivity.this,
+        		"SMS message sent",
+        		Toast.LENGTH_LONG).show();
+    	}catch(Exception ae){
+    		Toast.makeText(MortgageActivity.this,
+            		"Failed to send sms",
+            		Toast.LENGTH_LONG).show();
+    	}
     }
 }

@@ -58,6 +58,12 @@
 				android:layout_height="wrap_content" android:text="Send" />
 				
 		</LinearLayout>
+		
+		<com.mopub.mobileads.MoPubView
+		android:id="@+id/adview" android:layout_width="fill_parent"
+		android:layout_height="50dp" />
+		
+		
 
 	</LinearLayout>
 </ScrollView>
