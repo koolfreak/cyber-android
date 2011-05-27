@@ -19,10 +19,6 @@ public class CalculatorWidget extends TabActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        MoPubView mpv = (MoPubView) findViewById(R.id.adview);
-	    mpv.setAdUnitId("agltb3B1Yi1pbmNyDQsSBFNpdGUYmNfrAQw");
-	    mpv.loadAd();
-        
         setTabs();
     }
     

@@ -6,6 +6,8 @@ package com.cybernetics;
 import java.text.NumberFormat;
 import java.text.ParseException;
 
+import com.mopub.mobileads.MoPubView;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
@@ -16,6 +18,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * @author Emmanuel Nollase
@@ -32,6 +35,10 @@ public class SavingsActivity extends Activity {
 		final AlertDialog ad = adb.create();
 		ad.setCancelable(true);
 		ad.setCanceledOnTouchOutside(true);
+		
+		 MoPubView mpv = (MoPubView) findViewById(R.id.adview);
+		 mpv.setAdUnitId("agltb3B1Yi1pbmNyDQsSBFNpdGUYmNfrAQw");
+		 mpv.loadAd();
 		
 		final EditText principal = (EditText) findViewById(R.id.editTargetAmount);
 		final EditText saved = (EditText) findViewById(R.id.editSaved);
@@ -128,10 +135,19 @@ public class SavingsActivity extends Activity {
 	//---sends an SMS message to another device---
     private void sendSMS(String phoneNumber, String message)
     {        
-        PendingIntent pi = PendingIntent.getActivity(this, 0,
-            new Intent(this, MortgageActivity.class), 0);                
-        SmsManager sms = SmsManager.getDefault();
-        sms.sendTextMessage(phoneNumber, null, message, pi, null);        
+    	try {
+            PendingIntent pi = PendingIntent.getActivity(this, 0,
+                new Intent(this, MortgageActivity.class), 0);                
+            SmsManager sms = SmsManager.getDefault();
+            sms.sendTextMessage(phoneNumber, null, message, pi, null);
+            Toast.makeText(SavingsActivity.this,
+            		"SMS message sent",
+            		Toast.LENGTH_LONG).show();
+        	}catch(Exception ae){
+        		Toast.makeText(SavingsActivity.this,
+                		"Failed to send sms",
+                		Toast.LENGTH_LONG).show();
+        	}        
     }
 	
 }
